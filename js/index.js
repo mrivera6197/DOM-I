@@ -38,9 +38,9 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-// let logo = document.getElementById("logo-img");
-// console.log(logo);
-// logo.setAttribute('src', siteContent["nav"]["img-src"])
+let logo = document.getElementById("logo-img");
+console.log(logo);
+logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 let navGreen = document.querySelectorAll('nav a');
@@ -52,7 +52,15 @@ navGreen[3].textContent = 'Features'
 navGreen[4].textContent = 'About'
 navGreen[5].textContent = 'Contact'
 
-// navGreen.style.color = 'green'
+let navColor = document.querySelectorAll('nav a')
+
+//color nav green 
+
+for (let i = 0; i < navColor.length; i++){
+  navColor[i].style.color ='green'
+}
+
+// .style.color = 'blue'
 
 let navItem = document.querySelector('nav a')
 // console.log(navItem)
@@ -66,6 +74,7 @@ navContainer.appendChild(copyOfNavItem)
 
 //add nav item via prepend
 navContainer.prepend('Prepend')
+navContainer.style.color = 'green'
 
 //header img 
 
@@ -108,7 +117,7 @@ paragraphs[4].textContent = 'Vision content elementum magna eros, ac posuere elv
 
 //main-content img 
 
-let bodyImg = document.querySelector('.main-content img')
+let bodyImg = document.getElementById('middle-img')
 bodyImg.setAttribute('src', 'img/mid-page-accent.jpg')
 
 //contact p 
